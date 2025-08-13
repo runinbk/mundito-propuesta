@@ -24,7 +24,7 @@ export function HeroCarousel() {
   const { t } = useI18n();
 
   return (
-    <div className="relative w-full h-[60vh] md:h-[80vh]">
+    <div className="relative w-full h-[60vh] md:h-[500px]">
       <Carousel
         plugins={[plugin.current]}
         className="w-full h-full"
