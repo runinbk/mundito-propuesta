@@ -4,11 +4,11 @@ import Link from "next/link";
 import { useI18n } from "@/context/i18n";
 import { MunditoysLogo } from "@/components/icons";
 import { LanguageToggle } from "@/components/language-toggle";
-import { cn } from "@/lib/utils";
 import type { NavItem } from "@/types";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import { ThemeToggle } from "../theme-toggle";
 
 export function Header() {
   const { t } = useI18n();
@@ -43,6 +43,7 @@ export function Header() {
           </nav>
           <div className="hidden md:flex items-center space-x-2">
             <LanguageToggle />
+            <ThemeToggle />
           </div>
 
           <div className="md:hidden">
@@ -67,8 +68,9 @@ export function Header() {
                       {item.title}
                     </Link>
                   ))}
-                   <div className="pt-4">
+                   <div className="pt-4 flex items-center space-x-4">
                     <LanguageToggle />
+                    <ThemeToggle />
                    </div>
                 </nav>
               </SheetContent>
