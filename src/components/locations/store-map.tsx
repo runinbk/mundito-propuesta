@@ -27,7 +27,7 @@ export function StoreMap() {
     setSelectedStore(store);
   };
   
-  const mapId = process.env.NEXT_PUBLIC_GOOGLE_MAP_ID;
+  const mapId = process.env.NEXT_PUBLIC_GOOGLE_MAP_ID || "DEMO_MAP_ID";
 
   return (
     <div className="h-[calc(100vh-4rem)] w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
