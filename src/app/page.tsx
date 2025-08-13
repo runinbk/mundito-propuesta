@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
       <HeroCarousel />
-      <FeaturedProducts title={t('featuredProductsTitle')} />
+      <FeaturedProducts title={t('newProductsTitle')} viewAllText={t('viewAllLink')} />
       <section className="bg-background py-12 md:py-20">
         <div className="container text-center max-w-3xl mx-auto">
             <h2 className="text-center font-headline text-3xl font-bold md:text-4xl mb-4">{t('introTitle')}</h2>

@@ -10,9 +10,14 @@ export const translations = {
     heroTitle: "Tu Aventura Comienza Aquí",
     heroSubtitle: "Descubre un mundo de diversión y aprendizaje.",
     heroButton: "Explorar Juguetes",
-
+    heroTitleV2: "Desata Su Imaginación",
+    heroSubtitleV2: "Descubre nuestra nueva colección de juguetes creativos.",
+    heroButtonV2: "Comprar Novedades",
+    
     // Featured Products
     featuredProductsTitle: "Productos Destacados",
+    newProductsTitle: "Nuevos Productos",
+    viewAllLink: "Ver Todos",
 
     // Intro Text
     introTitle: "Bienvenido a Munditoys",
@@ -78,9 +83,14 @@ export const translations = {
     heroTitle: "Your Adventure Starts Here",
     heroSubtitle: "Discover a world of fun and learning.",
     heroButton: "Explore Toys",
+    heroTitleV2: "Unleash Their Imagination",
+    heroSubtitleV2: "Discover our new collection of creative toys.",
+    heroButtonV2: "Shop New Arrivals",
 
     // Featured Products
     featuredProductsTitle: "Featured Products",
+    newProductsTitle: "New Products",
+    viewAllLink: "View All",
 
     // Intro Text
     introTitle: "Welcome to Munditoys",

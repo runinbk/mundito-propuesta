@@ -8,11 +8,16 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { heroImages } from "@/lib/mock-data";
 import { useI18n } from "@/context/i18n";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
+
+const arrowClasses = "absolute top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-white/20 hover:bg-white/40 text-white";
 
 export function HeroCarousel() {
   const plugin = useRef(Autoplay({ delay: 7000, stopOnInteraction: true }));
@@ -25,6 +30,9 @@ export function HeroCarousel() {
         className="w-full h-full"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
+        opts={{
+            loop: true,
+        }}
       >
         <CarouselContent className="h-full">
           {heroImages.map((image, index) => (
@@ -41,13 +49,13 @@ export function HeroCarousel() {
                   />
                   <div className="relative z-10 text-center text-white p-4">
                     <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold drop-shadow-lg">
-                      {t('heroTitle')}
+                      {t('heroTitleV2')}
                     </h1>
                     <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
-                      {t('heroSubtitle')}
+                      {t('heroSubtitleV2')}
                     </p>
                     <Button asChild size="lg" className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground">
-                        <Link href="/products">{t('heroButton')}</Link>
+                        <Link href="/products">{t('heroButtonV2')}</Link>
                     </Button>
                   </div>
                 </CardContent>
@@ -55,6 +63,8 @@ export function HeroCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <CarouselPrevious className={cn(arrowClasses, "left-4")} />
+        <CarouselNext className={cn(arrowClasses, "right-4")} />
       </Carousel>
     </div>
   );
