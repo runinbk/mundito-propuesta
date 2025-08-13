@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useMemo } from "react";
 import type { Product } from "@/types";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -41,9 +44,6 @@ export function ProductCard({ product, lang }: ProductCardProps) {
   );
 }
 
-// A Client-side wrapper to use the i18n hook
-"use client";
-import { useMemo } from "react";
 export function ProductCardClient(props: { product: Product }) {
   const { lang } = useI18n();
   // useMemo ensures the component only re-renders when product or lang changes.
