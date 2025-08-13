@@ -44,6 +44,7 @@ export function HeroCarousel() {
                     alt={image.alt}
                     fill
                     className="object-cover brightness-50"
+                    style={{ objectFit: 'cover' }}
                     priority={index === 0}
                     data-ai-hint={image['data-ai-hint']}
                   />
