@@ -12,6 +12,19 @@ import Image from "next/image";
 
 const boliviaCenter = { lat: -17.0, lng: -65.0 };
 
+function MissingApiKey() {
+  return (
+    <div className="flex h-full items-center justify-center bg-background">
+      <div className="text-center">
+        <h3 className="font-headline text-lg font-semibold">Missing Google Maps API Key</h3>
+        <p className="text-muted-foreground">
+          Please add a `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` to your environment to see the map.
+        </p>
+      </div>
+    </div>
+  )
+}
+
 export function StoreMap() {
   const { t } = useI18n();
   const [selectedCity, setSelectedCity] = useState("all");
@@ -28,6 +41,7 @@ export function StoreMap() {
   };
   
   const mapId = process.env.NEXT_PUBLIC_GOOGLE_MAP_ID || "DEMO_MAP_ID";
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
   return (
     <div className="h-[calc(100vh-4rem)] w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
@@ -64,7 +78,8 @@ export function StoreMap() {
 
       <div className="col-span-1 md:col-span-2 lg:col-span-3 grid grid-rows-3">
         <div className="row-span-2 relative">
-            <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? ""}>
+           {apiKey ? (
+            <APIProvider apiKey={apiKey}>
                 <Map
                     defaultCenter={boliviaCenter}
                     defaultZoom={5}
@@ -83,6 +98,7 @@ export function StoreMap() {
                 ))}
                 </Map>
             </APIProvider>
+           ) : <MissingApiKey />}
         </div>
         <div className="row-span-1 bg-background border-t">
           {selectedStore && (
