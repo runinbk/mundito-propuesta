@@ -195,9 +195,9 @@ export const stores: Store[] = [
 ];
 
 export const heroImages = [
-    { src: "https://placehold.co/1920x1080.png", alt: "Hero Image 1", 'data-ai-hint': 'children playing' },
-    { src: "https://placehold.co/1920x1080.png", alt: "Hero Image 2", 'data-ai-hint': 'toy blocks' },
-    { src: "https://placehold.co/1920x1080.png", alt: "Hero Image 3", 'data-ai-hint': 'action figure' },
+    { src: "/assets/Portadas/portada1.png", alt: "Hero Image 1", 'data-ai-hint': 'children playing' },
+    { src: "/assets/Portadas/portada2.png", alt: "Hero Image 2", 'data-ai-hint': 'toy blocks' },
+    { src: "/assets/Portadas/portada3.png", alt: "Hero Image 3", 'data-ai-hint': 'action figure' },
 ];
 
 export const getProductBySlug = (slug: string) => products.find(p => p.slug === slug);

@@ -48,10 +48,10 @@ export function HeroCarousel() {
                     data-ai-hint={image['data-ai-hint']}
                   />
                   <div className="relative z-10 text-center text-white p-4">
-                    <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold drop-shadow-lg">
+                    <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold drop-shadow-lg text-white">
                       {t('heroTitleV2')}
                     </h1>
-                    <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
+                    <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md text-white">
                       {t('heroSubtitleV2')}
                     </p>
                     <Button asChild size="lg" className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground">
